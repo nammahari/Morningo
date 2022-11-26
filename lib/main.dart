@@ -8,10 +8,11 @@ import 'package:morningo/desktop_body.dart';
 void main() {
   runApp(const MaterialApp(
     home: Scaffold(
-      body:HeroPage(),
+      body: HeroPage(),
     ),
   ));
 }
+
 class HeroPage extends StatefulWidget {
   const HeroPage({key}) : super(key: key);
 
@@ -24,7 +25,9 @@ class _HeroPageState extends State<HeroPage> {
   Widget build(BuildContext context) {
     final currentWidth = MediaQuery.of(context).size.width;
     return const Scaffold(
-      body: Responsive(mobileBody: Mobile(), tabBody: MyTab(), desktopBody: Desktop()),
+      body: Responsive(
+          mobileBody: Mobile(), tabBody: MyTab(), desktopBody: Desktop()),
     );
   }
 }
+// COOL _ JARIF!
