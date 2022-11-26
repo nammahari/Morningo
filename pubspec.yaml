@@ -37,6 +37,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   social_media_buttons: ^0.1.2-nullsafety.0
+  
+  http: ^0.13.5
+  gsheets: ^0.4.2
+  email_validator: '^2.1.16'
+  # share functionality
+
 
 dev_dependencies:
   flutter_test:
