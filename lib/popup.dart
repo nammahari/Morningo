@@ -33,7 +33,6 @@ class _PopupState extends State<Popup> {
             child: const Text("Subscribe")),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
-
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             SocialMediaButton.instagram(
