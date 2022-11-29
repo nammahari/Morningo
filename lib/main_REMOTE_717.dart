@@ -1,12 +1,5 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:morningo/popup.dart';
-// import 'package:morningo/responsive.dart';
-// import 'package:morningo/mobile_body.dart';
-// import 'package:morningo/tab_body.dart';
-// import 'package:morningo/desktop_body.dart';
-=======
 import 'package:gsheets/gsheets.dart';
 import 'package:morningo/backend/EmailAPI.dart';
 import 'package:morningo/popup.dart';
@@ -15,7 +8,6 @@ import 'package:morningo/responsive.dart';
 import 'package:morningo/mobile_body.dart';
 import 'package:morningo/tab_body.dart';
 import 'package:morningo/desktop_body.dart';
->>>>>>> 0505b010d304e0dd1939616da28e56e64150c112
 
 Future googleSheetsInit() async {
   final gSheets = GSheets(EmailAPI.credintials);
@@ -31,30 +23,11 @@ void main() {
 
   runApp(const MaterialApp(
     home: Scaffold(
-      body:Popup(),
+      body: HeroPage(),
     ),
   ));
 }
 
-<<<<<<< HEAD
-// class HeroPage extends StatefulWidget {
-//   const HeroPage({key}) : super(key: key);
-//
-//   @override
-//   State<HeroPage> createState() => _HeroPageState();
-// }
-//
-// class _HeroPageState extends State<HeroPage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     final currentWidth = MediaQuery.of(context).size.width;
-//     return const Scaffold(
-//       body: Responsive(
-//           mobileBody: Mobile(), tabBody: MyTab(), desktopBody: Desktop()),
-//     );
-//   }
-// }
-=======
 class HeroPage extends StatefulWidget {
   const HeroPage({key}) : super(key: key);
 
@@ -97,4 +70,3 @@ class _HeroPageState extends State<HeroPage> {
   // await sheet.values.insertRow(1, firstRow);
   // // prints [index, letter, number, label]
   // print(await sheet.values.row(1));
->>>>>>> 0505b010d304e0dd1939616da28e56e64150c112

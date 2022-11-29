@@ -13,6 +13,7 @@ class Popup extends StatefulWidget {
 class _PopupState extends State<Popup> {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
@@ -100,6 +101,43 @@ class _PopupState extends State<Popup> {
               ),
             ], //Row Children
           ),
+=======
+    return SafeArea(
+        child: Column(
+      children: [
+        const Text(
+          "Get Updates",
+          style: TextStyle(fontSize: 50.0, color: Colors.orange),
+        ),
+        const Text("Email me,I will not bite you"),
+        TextButton(
+            onPressed: () {
+              const Mobile();
+            },
+            child: const Text("Email")),
+        TextButton(
+            onPressed: () {
+              const Mobile();
+            },
+            child: const Text("Subscribe")),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            SocialMediaButton.instagram(
+              url: "instgram.com/Morningo",
+              color: Colors.orange,
+            ),
+            SocialMediaButton.facebook(
+              url: "Facebook.com/Mornigo",
+              color: Colors.orange,
+            ),
+            SocialMediaButton.linkedin(
+              url: "#linkedin",
+              color: Colors.orange,
+            ),
+          ],
+>>>>>>> 0505b010d304e0dd1939616da28e56e64150c112
         ),
       ),
     );
