@@ -5,8 +5,7 @@ class Responsive extends StatelessWidget {
   final Widget tabBody;
   final Widget desktopBody;
   const Responsive(
-      {super.key,
-      required this.mobileBody,
+      {required this.mobileBody,
       required this.tabBody,
       required this.desktopBody});
 
