@@ -39,7 +39,7 @@ dependencies:
   #social_media_buttons: ^0.1.2-nullsafety.0
   font_awesome_flutter: ^10.3.0
   
-  flutter_web_browser: "^0.17.1"
+  flutter_custom_tabs: ^1.0.4
   gsheets: ^0.4.2
   email_validator: '^2.1.16'
   hovering: ^1.0.4
