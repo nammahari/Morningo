@@ -7,5 +7,5 @@ class Global {
   // Email
   static String gEmail = "";
 
-  // static late Worksheet worksheet;
+  static Worksheet? worksheet;
 }

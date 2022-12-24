@@ -26,20 +26,9 @@ class Desktop extends StatefulWidget {
 class _DesktopState extends State<Desktop> {
   TextEditingController emailController = TextEditingController();
 
-  // ignore: unnecessary_new
-  late Worksheet sheet;
-
-  Future googleSheetsInit() async {
-    final gSheets = GSheets(EmailAPI.credintials);
-    final ss = await gSheets.spreadsheet(EmailAPI.spriteSheetID);
-    sheet = ss.worksheetByTitle("Users")!;
-    // Global.worksheet = sheet;
-  }
-
   @override
   void initState() {
     super.initState();
-    googleSheetsInit();
   }
 
   @override
@@ -73,20 +62,19 @@ class _DesktopState extends State<Desktop> {
                   const SizedBox(
                     height: 50,
                   ),
+                  const SizedBox(
+                    width: 50,
+                    height: 10,
+                  ),
+                  Subscribe(
+                    emailController: emailController,
+                    sheet_: Global.worksheet,
+                  ),
                   Container(
                     margin: EdgeInsets.only(left: currentWidth * 0.02),
                     child: Form(
                       child: Column(
-                        children: [
-                          const SizedBox(
-                            width: 10,
-                            height: 10,
-                          ),
-                          Subscribe(
-                            emailController: emailController,
-                            sheet_: sheet,
-                          ),
-                        ],
+                        children: [],
                       ),
                     ),
                   ),

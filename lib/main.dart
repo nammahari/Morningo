@@ -24,26 +24,22 @@ import 'Models/Global.dart';
 // 7) Thank You Opt-In Page. (where there will be share morningo.app link to his friends) Design + Development
 // 8) social_share_plugin 2.8 (adding feature that; )
 
-// @dart=2.9
 Future googleSheetsInit() async {
   final gSheets = GSheets(EmailAPI.credintials);
   final ss = await gSheets.spreadsheet(EmailAPI.spriteSheetID);
-  var sheet = ss.worksheetByTitle("Users");
-  return sheet;
+  var sheet_ = ss.worksheetByTitle("Users");
+
+  Global.worksheet = sheet_;
 }
 
 void main() {
-  //googleSheetsInit();
-  // ignore: unused_local_variable
-  final gSheets = GSheets(EmailAPI.credintials);
-  // Global.worksheet = gSheets as Worksheet;
-
   WidgetsFlutterBinding.ensureInitialized();
+
+  googleSheetsInit();
+
   runApp(MaterialApp(
     // ignore: unnecessary_const
-    theme: ThemeData(
-        textTheme: GoogleFonts
-            .manropeTextTheme()), // Error Fix: Preferences -- Settings -- (Search "Flutter Additional") -->Flutter Addditional Args --> add --no-sound-null-safety
+    theme: ThemeData(textTheme: GoogleFonts.manropeTextTheme()),
     home: const Scaffold(
       body: HeroPage(),
     ),
@@ -69,24 +65,3 @@ class _HeroPageState extends State<HeroPage> {
     );
   }
 }
-// COOL _ JARIF!
-
-// this is the way to do it!
-//final firstColumn = ["hello"];
-//await sheet.values.insertColumnByKey(1, firstColumn);
-
-// final gSheets = GSheets(EmailAPI.credintials);
-//   final ss = await gSheets.spreadsheet(EmailAPI.spriteSheetID);
-//   var sheet = ss.worksheetByTitle("Users");
-
-// This is not the way to do it!
-//await sheet.values.insertValue("saugatjarif@gmail.com", column: 1, row: 2);
-//var y = await sheet.values.value(column: 2, row: 2);
-
-// what is the newest values row count?
-// add one, to the next
-//var x = sheet.values.allRows(fromColumn: 1);
-// final firstRow = ['index', 'letter', 'number', 'label'];
-// await sheet.values.insertRow(1, firstRow);
-// // prints [index, letter, number, label]
-// print(await sheet.values.row(1));

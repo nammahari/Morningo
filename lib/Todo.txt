@@ -1,0 +1,62 @@
+
+
+
+TODO: 
+
+1) Fix the Goddamn Button On Top 
+2) Thank you page
+3) Popup Pa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// COOL _ JARIF!
+
+// this is the way to do it!
+//final firstColumn = ["hello"];
+//await sheet.values.insertColumnByKey(1, firstColumn);
+
+// final gSheets = GSheets(EmailAPI.credintials);
+//   final ss = await gSheets.spreadsheet(EmailAPI.spriteSheetID);
+//   var sheet = ss.worksheetByTitle("Users");
+
+// This is not the way to do it!
+//await sheet.values.insertValue("saugatjarif@gmail.com", column: 1, row: 2);
+//var y = await sheet.values.value(column: 2, row: 2);
+
+// what is the newest values row count?
+// add one, to the next
+//var x = sheet.values.allRows(fromColumn: 1);
+// final firstRow = ['index', 'letter', 'number', 'label'];
+// await sheet.values.insertRow(1, firstRow);
+// // prints [index, letter, number, label]
+// print(await sheet.values.row(1));

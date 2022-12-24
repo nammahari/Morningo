@@ -42,15 +42,16 @@ class EmailAPI {
   // await sheet.values.appendRow(emailRow);
 
   // ignore: duplicate_ignore
-  Future<dynamic> post(String api) async {
-    Worksheet sheet = await googleSheetsInit();
-    // handle column and row
-  }
+//   Future<dynamic> post(String api) async {
+//     Worksheet sheet = await googleSheetsInit();
+//     // handle column and row
+//   }
 
-  Future<dynamic> get(String api) async {
-    // var url = Uri.parse(baseURL + api);
-  }
-  static bool checkEmail(String email) {
-    return EmailValidator.validate(email);
-  }
+//   Future<dynamic> get(String api) async {
+//     // var url = Uri.parse(baseURL + api);
+//   }
+//   static bool checkEmail(String email) {
+//     return EmailValidator.validate(email);
+//   }
+// }
 }
