@@ -36,9 +36,6 @@ class _DesktopState extends State<Desktop> {
     final currentWidth = MediaQuery.of(context).size.width;
     final currentHeight = MediaQuery.of(context).size.height;
 
-    // Main Variables
-    String email = "";
-
     return SafeArea(
       child: Container(
         margin: const EdgeInsets.only(left: 30),
@@ -69,14 +66,6 @@ class _DesktopState extends State<Desktop> {
                   Subscribe(
                     emailController: emailController,
                     sheet_: Global.worksheet,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: currentWidth * 0.02),
-                    child: Form(
-                      child: Column(
-                        children: [],
-                      ),
-                    ),
                   ),
                 ],
               ),

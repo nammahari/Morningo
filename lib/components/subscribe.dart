@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gsheets/gsheets.dart';
@@ -67,25 +69,23 @@ class _SubscribeState extends State<Subscribe> {
                 onPressed: () async {
                   // Call Popup (Popup())
                   // Adding the Previous Functionality
-                  // Works
-
+                  // Work
                   final bool emailValid = RegExp(
                           r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                      .hasMatch(widget.emailController.text);
+                      .hasMatch(email);
 
                   if (emailValid) {
                     final emailRow = [];
-                    emailRow.add(widget.emailController.text);
+                    emailRow.add(email);
                     await widget.sheet_!.values.appendRow(emailRow);
-                    // redirect him to a thank you page (have links!)
-                    // reset the emailController
+
                     widget.emailController.clear();
                     setState(() {});
                     const snackBar = SnackBar(
                       backgroundColor: Color.fromARGB(255, 54, 244, 133),
                       content: Text('Thank You For Your Email!'),
                     );
-                    // ignore: use_build_context_synchronously
+
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   } else {
                     const snackBar = SnackBar(

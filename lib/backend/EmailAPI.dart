@@ -2,10 +2,6 @@
 
 //const String baseURL = 'https://api.sendinblue.com/v3/contacts';
 
-import 'package:gsheets/gsheets.dart';
-import 'package:morningo/main.dart';
-import 'package:email_validator/email_validator.dart';
-
 class EmailAPI {
   static var credintials = r'''
   {
@@ -22,36 +18,4 @@ class EmailAPI {
 }
 ''';
   static var spriteSheetID = '1AMbOwD4mPJCJksTRjVvD-DvXWyuea_ddBWAKxns_eJ0';
-
-//     late Worksheet sheet;
-// Future googleSheetsInit() async {
-//   final gSheets = GSheets(EmailAPI.credintials);
-//   final ss = await gSheets.spreadsheet(EmailAPI.spriteSheetID);
-//   sheet = ss.worksheetByTitle("Users")!;
-// }
-  //  whatever file you want to add the fucntionality -> init():
-  //   void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   googleSheetsInit();
-  // }
-
-  // Works
-  // final emailRow = [];
-  // emailRow.add(emailController.text);
-  // await sheet.values.appendRow(emailRow);
-
-  // ignore: duplicate_ignore
-//   Future<dynamic> post(String api) async {
-//     Worksheet sheet = await googleSheetsInit();
-//     // handle column and row
-//   }
-
-//   Future<dynamic> get(String api) async {
-//     // var url = Uri.parse(baseURL + api);
-//   }
-//   static bool checkEmail(String email) {
-//     return EmailValidator.validate(email);
-//   }
-// }
 }
