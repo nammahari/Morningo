@@ -3,13 +3,15 @@ import 'package:flutter/services.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hovering/hovering.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:morningo/Models/Global.dart';
 
 class NavBar extends StatelessWidget {
-  const NavBar({Key? key}) : super(key: key);
+  NavBar({Key? key}) : super(key: key);
   void _launchURL(url) async {
     try {
       launch(url);
@@ -22,22 +24,31 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisSize: MainAxisSize.max,
       // ignore: prefer_const_literals_to_create_immutables
       children: [
-        //SvgPicture.asset("Logo.svg"),
-        Container(
-          margin: const EdgeInsets.only(left: 30),
-          child: Text(
-            "MORNINGO",
-            style: GoogleFonts.manrope(
-              textStyle: const TextStyle(
-                fontSize: 45,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                letterSpacing: Global.kletterSpacing,
+        Row(
+          //mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SvgPicture.asset(
+              'assets/images/Logo.svg',
+              width: 60,
+            ),
+            Container(
+              margin: const EdgeInsets.only(left: 30),
+              child: Text(
+                "MORNINGO",
+                style: GoogleFonts.manrope(
+                  textStyle: const TextStyle(
+                    fontSize: 45,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: Global.kletterSpacing,
+                  ),
+                ),
               ),
             ),
-          ),
+          ],
         ),
         Padding(
           padding: const EdgeInsets.all(30),
@@ -52,11 +63,14 @@ class NavBar extends StatelessWidget {
                   hoverChild: const Icon(
                     FontAwesomeIcons.facebook,
                     color: Colors.red,
-                    size: 30,
+                    size: Global.kNavSizeIcon,
                   ),
                   onHover: (PointerEnterEvent event) {},
-                  child: Icon(FontAwesomeIcons.facebook,
-                      color: Colors.amber[200], size: 30),
+                  child: Icon(
+                    FontAwesomeIcons.facebook,
+                    color: Colors.deepOrange[300],
+                    size: Global.kNavSizeIcon,
+                  ),
                 ),
               ),
               const SizedBox(width: 10),
@@ -67,11 +81,11 @@ class NavBar extends StatelessWidget {
                   hoverChild: const Icon(
                     FontAwesomeIcons.instagram,
                     color: Colors.red,
-                    size: 30,
+                    size: Global.kNavSizeIcon,
                   ),
                   onHover: (PointerEnterEvent event) {},
                   child: Icon(FontAwesomeIcons.instagram,
-                      color: Colors.amber[200], size: 30),
+                      color: Colors.amber[200], size: Global.kNavSizeIcon),
                 ),
               ),
               const SizedBox(width: 10),
@@ -82,11 +96,11 @@ class NavBar extends StatelessWidget {
                   hoverChild: const Icon(
                     FontAwesomeIcons.linkedin,
                     color: Colors.red,
-                    size: 30,
+                    size: Global.kNavSizeIcon,
                   ),
                   onHover: (PointerEnterEvent event) {},
                   child: Icon(FontAwesomeIcons.linkedin,
-                      color: Colors.amber[200], size: 30),
+                      color: Colors.amber[200], size: Global.kNavSizeIcon),
                 ),
               ),
               const SizedBox(width: 10),
@@ -95,12 +109,12 @@ class NavBar extends StatelessWidget {
                 child: HoverWidget(
                   hoverChild: const Icon(
                     FontAwesomeIcons.discord,
-                    color: Colors.red,
-                    size: 30,
+                    color: Colors.redAccent,
+                    size: Global.kNavSizeIcon,
                   ),
                   onHover: (PointerEnterEvent event) {},
                   child: Icon(FontAwesomeIcons.discord,
-                      color: Colors.amber[200], size: 30),
+                      color: Colors.amber[200], size: Global.kNavSizeIcon),
                 ),
               ),
 

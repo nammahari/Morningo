@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Models/Global.dart';
+import '../../Models/Global.dart';
 
 class MainText extends StatelessWidget {
   const MainText({Key? key}) : super(key: key);
@@ -15,8 +15,8 @@ class MainText extends StatelessWidget {
           child: RichText(
             text: const TextSpan(
               /*defining default style is optional */
-              style: TextStyle(fontSize: 124),
-              children: <TextSpan>[
+              style: TextStyle(fontSize: 124, fontWeight: FontWeight.w800),
+              children: [
                 // EARLY
                 TextSpan(
                   text: ' WAKE UP ',
@@ -24,8 +24,10 @@ class MainText extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 1, 1, 1),
                     letterSpacing: Global.kletterSpacing,
+                    height: 1.4,
                   ),
                 ),
+
                 TextSpan(
                   text: "EARLY \n ",
                   style: TextStyle(
@@ -53,12 +55,6 @@ class MainText extends StatelessWidget {
             ),
           ),
         ),
-
-        // Text(
-        //   ' Wake Up Early without \n Alarm Using \n Morningo',
-        //   style: TextStyle(
-        //       fontWeight: FontWeight.bold, fontSize: 90),
-        // ),
       ],
     );
   }

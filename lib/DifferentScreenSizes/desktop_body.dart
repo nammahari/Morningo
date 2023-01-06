@@ -1,24 +1,12 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:morningo/Models/Global.dart';
-import 'package:morningo/components/MainText.dart';
+import 'package:morningo/components/MainBody.dart';
 import 'package:morningo/components/NavBar.dart';
 import 'package:morningo/components/subscribe.dart';
-import '../Models/kTextTheme.dart';
-import 'package:gsheets/gsheets.dart';
-// import 'package:morningo/popup.dart';
-// ignore: import_of_legacy_library_into_null_safe
-
-import "package:hovering/hovering.dart";
-import '../backend/EmailAPI.dart';
 
 //Desktop View 🖥
 class Desktop extends StatefulWidget {
   const Desktop({Key? key}) : super(key: key);
-
   @override
   State<Desktop> createState() => _DesktopState();
 }
@@ -27,9 +15,7 @@ class _DesktopState extends State<Desktop> {
   TextEditingController emailController = TextEditingController();
 
   @override
-  void initState() {
-    super.initState();
-  }
+  void initState() => super.initState();
 
   @override
   Widget build(BuildContext context) {
@@ -49,20 +35,14 @@ class _DesktopState extends State<Desktop> {
                 height: 30,
               ),
               // Paste the class here
-              const NavBar(),
+              Container(
+                  margin: const EdgeInsets.only(left: 30), child: NavBar()),
               const SizedBox(
                 height: 10,
               ),
               Column(
                 children: [
-                  const MainText(),
-                  const SizedBox(
-                    height: 50,
-                  ),
-                  const SizedBox(
-                    width: 50,
-                    height: 10,
-                  ),
+                  const MainBody(),
                   Subscribe(
                     emailController: emailController,
                     sheet_: Global.worksheet,

@@ -46,7 +46,7 @@ dependencies:
   google_fonts: ^3.0.1
   flutter_svg: ^1.1.6
   # share functionality
-
+  
 
 dev_dependencies:
   flutter_test:
@@ -71,8 +71,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - F:\Projects\Morningo Landing Page\Morningo-Web\images
+  assets:
+    - assets/images/
     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

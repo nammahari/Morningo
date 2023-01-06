@@ -30,7 +30,7 @@ class _SubscribeState extends State<Subscribe> {
         child: Row(
           children: [
             SizedBox(
-              width: 350,
+              width: 500,
               child: TextFormField(
                 controller: widget.emailController,
                 decoration: InputDecoration(
@@ -39,9 +39,14 @@ class _SubscribeState extends State<Subscribe> {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   filled: true,
-                  hintStyle: TextStyle(color: Colors.grey[800]),
+                  hintStyle: GoogleFonts.manrope(
+                    fontSize: 20,
+                  ),
                   hintText: "Enter Your Email",
                   labelText: "Email",
+                  labelStyle: GoogleFonts.manrope(
+                    fontSize: 20,
+                  ),
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: 40, vertical: 35),
                 ),
@@ -58,9 +63,6 @@ class _SubscribeState extends State<Subscribe> {
               height: 100,
               child: TextButton(
                 style: ButtonStyle(
-                  // padding: MaterialStateProperty.all(
-                  //     const EdgeInsets.all(30)),
-                  //elevation: MaterialStateProperty.all(8),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))),
                   backgroundColor: MaterialStateProperty.all(

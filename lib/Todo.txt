@@ -2,10 +2,14 @@
 
 
 TODO: 
+----
+1) Fix the Goddamn Button On Top (Done) 
+2) Thank you page design 
+3) Thank you page development 
+3) Popup Page development 
+4) Tab View Desgin 
+5) Tab View Development 
 
-1) Fix the Goddamn Button On Top 
-2) Thank you page
-3) Popup Pa
 
 
 
