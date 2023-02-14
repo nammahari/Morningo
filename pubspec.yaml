@@ -36,8 +36,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+<<<<<<< HEAD
   #social_media_buttons: ^0.1.2-nullsafety.0
   font_awesome_flutter: ^10.3.0
+=======
+  social_media_buttons: ^0.1.2-nullsafety.0
+<<<<<<< HEAD
+  google_fonts: ^3.0.1
+=======
+>>>>>>> main
   
   flutter_custom_tabs: ^1.0.4
   gsheets: ^0.4.2
@@ -46,7 +53,12 @@ dependencies:
   google_fonts: ^3.0.1
   flutter_svg: ^1.1.6
   # share functionality
+<<<<<<< HEAD
   
+=======
+>>>>>>> 0505b010d304e0dd1939616da28e56e64150c112
+
+>>>>>>> main
 
 dev_dependencies:
   flutter_test:
@@ -71,9 +83,20 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
+<<<<<<< HEAD
   assets:
     - assets/images/
+=======
+<<<<<<< HEAD
+  assets:
+    - img/
+
+=======
+  # assets:
+  #   - images
+>>>>>>> main
     
+>>>>>>> 0505b010d304e0dd1939616da28e56e64150c112
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -85,12 +108,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+#   fonts:
+#     - family: Manrope
+#       fonts:
+#         - asset: font/Manrope-Bold.ttf
+#           - style: Bold
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
