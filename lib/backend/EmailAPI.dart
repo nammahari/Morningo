@@ -2,9 +2,6 @@
 
 //const String baseURL = 'https://api.sendinblue.com/v3/contacts';
 
-import 'package:gsheets/gsheets.dart';
-import 'package:morningo/main.dart';
-
 class EmailAPI {
   static var credintials = r'''
   {
@@ -21,16 +18,4 @@ class EmailAPI {
 }
 ''';
   static var spriteSheetID = '1AMbOwD4mPJCJksTRjVvD-DvXWyuea_ddBWAKxns_eJ0';
-
-  // ignore: duplicate_ignore
-  Future<dynamic> post(String api) async {
-    Worksheet sheet = await googleSheetsInit();
-    // handle column and row
-  }
-
-  Future<dynamic> get(String api) async {
-    // var url = Uri.parse(baseURL + api);
-  }
-  void edit() {}
-  void delete() {}
 }

@@ -1,0 +1,106 @@
+
+
+
+TODO: 
+----
+1) Fix the Goddamn Button On Top (Done) 
+2) Thank you page design 
+3) Thank you page development 
+3) Popup Page development 
+4) Tab View Desgin 
+5) Tab View Development 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// COOL _ JARIF!
+
+// this is the way to do it!
+//final firstColumn = ["hello"];
+//await sheet.values.insertColumnByKey(1, firstColumn);
+
+// final gSheets = GSheets(EmailAPI.credintials);
+//   final ss = await gSheets.spreadsheet(EmailAPI.spriteSheetID);
+//   var sheet = ss.worksheetByTitle("Users");
+
+// This is not the way to do it!
+//await sheet.values.insertValue("saugatjarif@gmail.com", column: 1, row: 2);
+//var y = await sheet.values.value(column: 2, row: 2);
+
+// what is the newest values row count?
+// add one, to the next
+//var x = sheet.values.allRows(fromColumn: 1);
+// final firstRow = ['index', 'letter', 'number', 'label'];
+// await sheet.values.insertRow(1, firstRow);
+// // prints [index, letter, number, label]
+// print(await sheet.values.row(1));
+
+
+
+
+
+
+
+
+/     late Worksheet sheet;
+// Future googleSheetsInit() async {
+//   final gSheets = GSheets(EmailAPI.credintials);
+//   final ss = await gSheets.spreadsheet(EmailAPI.spriteSheetID);
+//   sheet = ss.worksheetByTitle("Users")!;
+// }
+  //  whatever file you want to add the fucntionality -> init():
+  //   void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   googleSheetsInit();
+  // }
+
+  // Works
+  // final emailRow = [];
+  // emailRow.add(emailController.text);
+  // await sheet.values.appendRow(emailRow);
+
+  // ignore: duplicate_ignore
+//   Future<dynamic> post(String api) async {
+//     Worksheet sheet = await googleSheetsInit();
+//     // handle column and row
+//   }
+
+//   Future<dynamic> get(String api) async {
+//     // var url = Uri.parse(baseURL + api);
+//   }
+//   static bool checkEmail(String email) {
+//     return EmailValidator.validate(email);
+//   }
+// }
+  
